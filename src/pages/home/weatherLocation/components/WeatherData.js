@@ -35,14 +35,9 @@ const WeatherData = ({ icon, temperature, extraInfo }) => {
     const icon = icons[iconParam];
     return (
       <div className="containerIconWeatherData">
-        <Icon
-          path={icon}
-          title="icon"
-          size={1}
-          color="black"
-        />
+        <Icon path={icon} title="icon" size={1} color="#555" />
       </div>
-    )
+    );
   }
 
   return (
