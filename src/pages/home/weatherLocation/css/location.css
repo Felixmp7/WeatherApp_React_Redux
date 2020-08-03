@@ -1,0 +1,10 @@
+.locationContainer {
+  display: flex;
+  border-bottom: 1.5px solid #a2aaa255;
+  margin-bottom: 10px;
+}
+
+.locationTitle {
+  margin: 5px 0px;
+  font-size: 22px;
+}

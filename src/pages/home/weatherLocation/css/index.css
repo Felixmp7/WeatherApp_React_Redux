@@ -1,0 +1,12 @@
+.containerWeatherItem {
+  /* border: 2px solid black; */
+  display:flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 30vh auto;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 13px 0px rgba(173,173,173,1);
+  -moz-box-shadow: 0px 3px 13px 0px rgba(173,173,173,1);
+  box-shadow: 0px 3px 13px 0px rgba(173,173,173,1);
+  padding: 10px;
+}
