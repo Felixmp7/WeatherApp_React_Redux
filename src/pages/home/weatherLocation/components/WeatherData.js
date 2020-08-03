@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "@mdi/react";
-import { 
+import {
   mdiWhiteBalanceSunny,
-  mdiWeatherFog
+  mdiWeatherFog,
+  mdiWeatherCloudy,
+  mdiWeatherPouring,
+  mdiWeatherSnowy,
+  mdiWeatherWindyVariant,
 } from "@mdi/js";
 import { 
   SUN,
@@ -18,10 +22,10 @@ import '../css/weatherData.css'
 const icons = {
   [SUN]: mdiWhiteBalanceSunny,
   [CLOUDY]: mdiWeatherFog,
-  [CLOUD]:'',
-  [RAIN]: '',
-  [SNOW]: '',
-  [WINDY]: ''
+  [CLOUD]: mdiWeatherCloudy,
+  [RAIN]: mdiWeatherPouring,
+  [SNOW]: mdiWeatherSnowy,
+  [WINDY]: mdiWeatherWindyVariant,
 };
 
 
