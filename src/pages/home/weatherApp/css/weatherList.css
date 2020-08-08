@@ -1,0 +1,36 @@
+.containerList {
+  width: 40%;
+  /* background-color: lightcyan; */
+  height: 100%;
+  /* overflow: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.header {
+  width: 100%;
+  /* height: 5%; */
+  margin-bottom: 0;
+  /* padding: 0px; */
+  /* border: 1px solid; */
+  text-align: center;
+  color: #f58747;
+}
+
+.containerElements {
+  /* position: fixed; */
+  /* background-color: lightcoral; */
+  width: 100%;
+  padding: 20px 0;
+  /* border: 1px solid; */
+
+  /* height: 80%; */
+  /* overflow: auto; */
+  /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

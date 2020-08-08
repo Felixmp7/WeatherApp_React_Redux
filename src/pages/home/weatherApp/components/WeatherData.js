@@ -3,39 +3,39 @@ import PropTypes from "prop-types";
 import Icon from "@mdi/react";
 import {
   mdiWhiteBalanceSunny,
-  mdiWeatherFog,
   mdiWeatherCloudy,
   mdiWeatherPouring,
-  mdiWeatherSnowy,
-  mdiWeatherWindyVariant,
+  mdiWeatherLightning,
 } from "@mdi/js";
 import { 
   SUN,
   CLOUDY,
-  CLOUD,
+  THUNDERS,
   RAIN,
-  SNOW,
-  WINDY
 } from '../../../../constants/icons';
 import '../css/weatherData.css'
 
 const icons = {
   [SUN]: mdiWhiteBalanceSunny,
-  [CLOUDY]: mdiWeatherFog,
-  [CLOUD]: mdiWeatherCloudy,
+  [CLOUDY]: mdiWeatherCloudy,
   [RAIN]: mdiWeatherPouring,
-  [SNOW]: mdiWeatherSnowy,
-  [WINDY]: mdiWeatherWindyVariant,
+  [THUNDERS]: mdiWeatherLightning,
 };
 
 
 const WeatherData = ({ icon, temperature, extraInfo }) => {
   // Methods
   const renderIcon = iconParam => {
+    let color;
     const icon = icons[iconParam];
+
+    if (iconParam === 'SUN') color = "#f58747";
+    else if (iconParam === 'CLOUDY') color = "#00d8ff";
+    else if (iconParam === 'THUNDERS') color = "#999";
+    else if (iconParam === 'RAIN') color = "#555";
     return (
       <div className="containerIconWeatherData">
-        <Icon path={icon} title="icon" size={1} color="#f58747" />
+        <Icon path={icon} title="icon" size={1} color={color} />
       </div>
     );
   }
@@ -57,7 +57,7 @@ const WeatherData = ({ icon, temperature, extraInfo }) => {
 
 WeatherData.propTypes = {
   icon: PropTypes.string,
-  temperature: PropTypes.number,
+  temperature: PropTypes.string,
   extraInfo: PropTypes.shape({
     humidity: PropTypes.string,
     wind: PropTypes.string,

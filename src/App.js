@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './pages/home/weatherLocation';
+import Home from './pages/home/weatherApp';
 
 const App = () => <Home/>;
 
