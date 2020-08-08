@@ -7,7 +7,7 @@ export const getWeatherData = async () => {
     const serverResponse = await fetch(url);
     console.log(serverResponse)
 
-    if (serverResponse.status != 404) {
+    if (serverResponse.status !== 404) {
       response = "SUCCESS";
       return serverResponse.json()
     } else response = `FAIL`;

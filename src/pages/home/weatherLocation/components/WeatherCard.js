@@ -1,7 +1,7 @@
 import React from "react";
 import WeatherData from "./WeatherData";
 import Location from "./Location";
-import "../css/WeatherCard.css";
+import "../css/weatherCard.css";
 
 const WeatherCard = ({ icon, temperature, humidity, wind, city }) => (
   <div className="containerWeatherItem">

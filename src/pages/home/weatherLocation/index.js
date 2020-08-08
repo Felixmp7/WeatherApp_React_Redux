@@ -9,6 +9,7 @@ import { getWeatherData } from '../../../utils/api/api'
 const WeatherLocation = props => {
 
   const [weatherData, loadWeatherData] = useState({});
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect( () => {
     loadData();
@@ -23,21 +24,27 @@ const WeatherLocation = props => {
       wind: String(list[0].wind.speed),
       temperature: list[0].main.temp,
       city: city.name,
-      icon: list[0].weather.main == 'Clear' ? SUN : WINDY,
+      icon: list[0].weather.main === 'Clear' ? SUN : WINDY,
     };
     // Set data
     loadWeatherData(data);
+    setDataLoaded(true);
   }
 
-  return (
-    <WeatherCard 
-      humidity={weatherData.humidity}
-      wind={weatherData.wind}
-      temperature={weatherData.temperature}
-      city={weatherData.city}
-      icon={weatherData.icon}
-    />
-  )
+  if (dataLoaded) {
+    return (
+      <WeatherCard 
+        humidity={weatherData.humidity}
+        wind={weatherData.wind}
+        temperature={weatherData.temperature}
+        city={weatherData.city}
+        icon={weatherData.icon}
+      />
+    )
+  } else {
+    return <h4>Loading...</h4>
+  }
+
 }
 
 export default WeatherLocation;
