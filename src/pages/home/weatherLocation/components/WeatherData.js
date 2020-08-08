@@ -35,7 +35,7 @@ const WeatherData = ({ icon, temperature, extraInfo }) => {
     const icon = icons[iconParam];
     return (
       <div className="containerIconWeatherData">
-        <Icon path={icon} title="icon" size={1} color="#555" />
+        <Icon path={icon} title="icon" size={1} color="#f58747" />
       </div>
     );
   }
@@ -43,7 +43,10 @@ const WeatherData = ({ icon, temperature, extraInfo }) => {
   return (
     <div className="containerWeatherData">
       {renderIcon(icon)}
-      <div className="temperature">{`${temperature} °C`}</div>
+      <div className="temperature">
+        <span className="tempetureNumber">{temperature}</span>
+        <span> °C</span>
+      </div>
       <div className="containerExtraInfo">
         <span className="humidity">{`${extraInfo.humidity}% `}</span>
         <span className="wind">{extraInfo.wind}</span>
@@ -53,9 +56,12 @@ const WeatherData = ({ icon, temperature, extraInfo }) => {
 };
 
 WeatherData.propTypes = {
-  icon: PropTypes.string ,
-  temperature:PropTypes.number ,
-  extraInfo:PropTypes.object
+  icon: PropTypes.string,
+  temperature: PropTypes.number,
+  extraInfo: PropTypes.shape({
+    humidity: PropTypes.string,
+    wind: PropTypes.string,
+  }),
 };
 
 export default WeatherData;
