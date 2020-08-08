@@ -1,10 +1,15 @@
 import React, {useState, useEffect} from 'react'
+// Components
+import Loader from "react-loader-spinner";
 import WeatherCard from "./components/WeatherCard";
+// Methods
+import { getWeatherData } from '../../../utils/api/api'
+// Constants
 import {
   SUN, WINDY
 } from '../../../constants/icons';
-//Methods
-import { getWeatherData } from '../../../utils/api/api'
+// CSS
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const WeatherLocation = props => {
 
@@ -28,7 +33,9 @@ const WeatherLocation = props => {
     };
     // Set data
     loadWeatherData(data);
-    setDataLoaded(true);
+    setTimeout( () => {
+      setDataLoaded(true);
+    },3000)
   }
 
   if (dataLoaded) {
@@ -42,7 +49,23 @@ const WeatherLocation = props => {
       />
     )
   } else {
-    return <h4>Loading...</h4>
+    return (
+      <div style={{
+        width: '100%',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <Loader
+          type="Watch"
+          color="#00BFFF"
+          height={80}
+          width={80}
+          // timeout={3000} //3 secs
+        />
+      </div>
+    );
   }
 
 }
