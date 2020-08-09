@@ -1,5 +1,5 @@
 .containerWeatherColumn {
-  border: 2px solid;
+  /* border: 2px solid; */
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
 
 .currentTitle {
   /* border: 2px solid; */
-  color: #60adb3
+  color: #60adb3;
 }
 
 .containerWeatherExpanded {

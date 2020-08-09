@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types'
+import Loader from "react-loader-spinner";
 import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
 import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard'
 import '../css/weatherExpanded.css'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
 
 const iconsRelation = {
   Clear: SUN,
@@ -16,39 +19,55 @@ const WeatherExpanded = ({ weatherSelected }) => {
   console.log(weatherSelected);
 
   const [iconTransformed, transformIcon] = useState(weatherSelected.icon);
+  const [dataLoaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const iconData = getIcon(weatherSelected.icon);
-    transformIcon(iconData);
+    getIcon(weatherSelected.icon);
+    setTimeout( () => {
+      setLoaded(true);
+    },5000)
+    
   }, [])
 
   const getIcon = (icon) => {
     const iconTransformed = iconsRelation[icon];
-    return iconTransformed;
+    transformIcon(iconTransformed);
   };
 
   const {
     humidity,
     wind,
     temperature,
-    city,
-    icon
+    city
   } = weatherSelected;
+
   return (
     <div className="containerWeatherColumn">
       <h3 className="currentTitle">Current Weather</h3>
-      <div className="containerWeatherExpanded">
-        <div className="currentWeather">
-          <WeatherCard
-            humidity={humidity}
-            wind={wind}
-            temperature={temperature}
-            city={city}
-            icon={icon}
+      {dataLoaded ? (
+        <div className="containerWeatherExpanded">
+          <div className="currentWeather">
+            <WeatherCard
+              humidity={humidity}
+              wind={wind}
+              temperature={temperature}
+              city={city}
+              icon={iconTransformed}
+            />
+          </div>
+          {/* <div className="nexWeathers"></div> */}
+        </div>
+      ) : (
+        <div className="loaderCentered">
+          <Loader
+            type="TailSpin"
+            color="#3a2ca5"
+            height={40}
+            width={40}
+            // timeout={3000} //3 secs
           />
         </div>
-        <div className="nexWeathers"></div>
-      </div>
+      )}
     </div>
   );
 };
