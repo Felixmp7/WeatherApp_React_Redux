@@ -1,5 +1,5 @@
 import React from 'react'
-import WeatherCard from '../components/WeatherCard';
+import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard';
 import PropTypes from 'prop-types'
 // Constants
 import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
@@ -7,10 +7,10 @@ import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
 import '../css/weatherList.css'
 
 const iconsRelation = {
-  ['Clear']: SUN,
-  ['Clouds']: CLOUDY,
-  ['Thunderstorm']: THUNDERS,
-  ['Rain']: RAIN,
+  'Clear': SUN,
+  'Clouds': CLOUDY,
+  'Thunderstorm': THUNDERS,
+  'Rain': RAIN,
 };
 
 const WeatherList = ({weatherList}) => {
@@ -29,6 +29,7 @@ const WeatherList = ({weatherList}) => {
           return (
             <WeatherCard
               key={index}
+              withShadow
               humidity={weather.humidity}
               wind={weather.wind}
               temperature={weather.temperature}

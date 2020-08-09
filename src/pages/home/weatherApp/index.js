@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 // Components
 import Loader from "react-loader-spinner";
-import WeatherCard from "./components/WeatherCard";
 import WeatherExpanded from "./containers/WeatherExpanded";
 import WeatherList from "./containers/WeatherList";
 // DATA
@@ -14,6 +13,7 @@ const WeatherApp = () => {
 
   const [weatherData, loadWeatherData] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [weatherSelected, selectWeather] = useState(null)
 
   useEffect( () => {
     loadData();
@@ -21,17 +21,19 @@ const WeatherApp = () => {
 
   const loadData = async () => {
     const weatherDataLoaded = APIDATA.map( item => {
-      console.log(item.weather[0].main)
+      // console.log(item.weather[0].main)
       return {
         humidity: String(item.main.humidity),
         wind: String(item.wind.speed),
         temperature: (item.main.temp / 10).toFixed(2),
         city: item.city.name,
-        icon: item.weather[0].main
+        icon: item.weather[0].main,
+        nextDaysData: item.nextDays
       };
     })
     // Set data
     loadWeatherData(weatherDataLoaded);
+    selectWeather(weatherDataLoaded[0]);
     setTimeout( () => {
       setDataLoaded(true);
     },3000)
@@ -41,7 +43,7 @@ const WeatherApp = () => {
     return (
       <div className="containerApp">
         <WeatherList weatherList={weatherData} />
-        <WeatherExpanded />
+        <WeatherExpanded weatherSelected={weatherSelected} />
       </div>
     );
   } else {

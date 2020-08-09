@@ -7,12 +7,7 @@ import {
   mdiWeatherPouring,
   mdiWeatherLightning,
 } from "@mdi/js";
-import { 
-  SUN,
-  CLOUDY,
-  THUNDERS,
-  RAIN,
-} from '../../../../constants/icons';
+import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../constants/icons";
 import '../css/weatherData.css'
 
 const icons = {

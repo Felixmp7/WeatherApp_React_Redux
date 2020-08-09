@@ -33,6 +33,26 @@
         "description": "overcast clouds",
         "icon": "04d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -68,6 +88,26 @@
         "main": "Clear",
         "description": "clear sky",
         "icon": "01d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -105,6 +145,26 @@
         "description": "clear sky",
         "icon": "01d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -140,6 +200,26 @@
         "main": "Clear",
         "description": "clear sky",
         "icon": "01d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -177,6 +257,26 @@
         "description": "broken clouds",
         "icon": "04d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -212,6 +312,26 @@
         "main": "Clouds",
         "description": "broken clouds",
         "icon": "04d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -249,6 +369,26 @@
         "description": "clear sky",
         "icon": "01d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -284,6 +424,26 @@
         "main": "Clear",
         "description": "clear sky",
         "icon": "01d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -321,6 +481,26 @@
         "description": "clear sky",
         "icon": "01d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -356,6 +536,26 @@
         "main": "Clear",
         "description": "clear sky",
         "icon": "01d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -393,6 +593,26 @@
         "description": "thunderstorm with rain",
         "icon": "11d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -428,6 +648,26 @@
         "main": "Clouds",
         "description": "broken clouds",
         "icon": "04d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -465,6 +705,26 @@
         "description": "clear sky",
         "icon": "01d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -500,6 +760,26 @@
         "main": "Clear",
         "description": "clear sky",
         "icon": "01d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -537,6 +817,26 @@
         "description": "broken clouds",
         "icon": "04d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -572,6 +872,26 @@
         "main": "Rain",
         "description": "light rain",
         "icon": "10d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
@@ -609,6 +929,26 @@
         "description": "clear sky",
         "icon": "01d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -645,6 +985,26 @@
         "description": "light rain",
         "icon": "10d"
       }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
+      }
     ]
   },
 {
@@ -680,6 +1040,26 @@
         "main": "Clear",
         "description": "clear sky",
         "icon": "01d"
+      }
+    ],
+    "nextDays": [
+      {
+        "humidity": 80,
+        "wind": 3,
+        "temperature": 220,
+        "icon": "Snow"
+      },
+      {
+        "humidity": 40,
+        "wind": 3.2,
+        "temperature": 200,
+        "icon": "Clouds"
+      },
+      {
+        "humidity": 20,
+        "wind": 3,
+        "temperature": 320,
+        "icon": "Sun"
       }
     ]
   },
