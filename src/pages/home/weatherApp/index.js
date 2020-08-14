@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { connect } from 'react-redux';
 // Components
 import Loader from "react-loader-spinner";
 import WeatherExpanded from "./containers/WeatherExpanded";
@@ -10,12 +11,10 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/index.css";
 // Actions
 import {actionCreator} from '../../../actions/index'
-// Store
-import {store} from '../../../store/index'
 
 
 
-const WeatherApp = () => {
+const WeatherApp = (props) => {
 
   const [weatherData, loadWeatherData] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -48,7 +47,7 @@ const WeatherApp = () => {
   }
   
   const changeWeather = (weather) => {
-    store.dispatch(actionCreator(weather));
+    props.selectWeatherAction(weather);
     selectWeather(weather);
   }
 
@@ -75,4 +74,10 @@ const WeatherApp = () => {
 
 }
 
-export default WeatherApp;
+const mapDispatchToProps = (dispatch) => ({
+  selectWeatherAction: (value) => dispatch(actionCreator(value)),
+});
+
+const WeatherAppConnected = connect(null, mapDispatchToProps)(WeatherApp);
+
+export default WeatherAppConnected;
