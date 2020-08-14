@@ -47,6 +47,7 @@ const WeatherApp = (props) => {
   }
   
   const changeWeather = (weather) => {
+    // Accedo a éstas acciones mediante las props.
     props.selectWeatherAction(weather);
     selectWeather(weather);
   }
@@ -75,6 +76,7 @@ const WeatherApp = (props) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
+  // Éste es un objeto de las acciones que puede usar éste componente
   selectWeatherAction: (value) => dispatch(actionCreator(value)),
 });
 
