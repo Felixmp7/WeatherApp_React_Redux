@@ -1,10 +1,15 @@
+// Dependencies
 import React from 'react'
-import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard';
 import PropTypes from 'prop-types'
+import { connect } from "react-redux";
+// Components
+import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard';
 // Constants
 import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
 //CSS
 import '../css/weatherList.css'
+// Actions
+import { actionCreator } from "../../../../actions/index";
 
 const iconsRelation = {
   'Clear': SUN,
@@ -13,12 +18,17 @@ const iconsRelation = {
   'Rain': RAIN,
 };
 
-const WeatherList = ({weatherList, selectWeather}) => {
-
+const WeatherList = ({ weatherList, selectWeather, selectWeatherAction }) => {
   const getIcon = (icon) => {
     const iconTransformed = iconsRelation[icon];
     return iconTransformed;
-  }
+  };
+
+  const handleSelectWeather = (weather) => {
+    selectWeather(weather);
+    selectWeatherAction(weather);
+  };
+
   return (
     <div className="containerList">
       <h3 className="header">Cities</h3>
@@ -31,7 +41,7 @@ const WeatherList = ({weatherList, selectWeather}) => {
               key={index}
               withShadow
               weatherExpandedForData={weather}
-              selectWeather={selectWeather}
+              selectWeather={handleSelectWeather}
               humidity={weather.humidity}
               wind={weather.wind}
               temperature={weather.temperature}
@@ -43,10 +53,16 @@ const WeatherList = ({weatherList, selectWeather}) => {
       </div>
     </div>
   );
-}
-
-WeatherList.propTypes = {
-  weatherList: PropTypes.array
 };
 
-export default WeatherList
+WeatherList.propTypes = {
+  weatherList: PropTypes.array,
+  selectWeatherAction: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  // Éste es un objeto de las acciones que puede usar éste componente
+  selectWeatherAction: (value) => dispatch(actionCreator(value)),
+});
+
+export default connect(null, mapDispatchToProps)(WeatherList)

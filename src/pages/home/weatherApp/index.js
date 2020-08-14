@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { connect } from 'react-redux';
 // Components
 import Loader from "react-loader-spinner";
 import WeatherExpanded from "./containers/WeatherExpanded";
@@ -9,46 +8,29 @@ import APIDATA from '../../../utils/api/data.json';
 // CSS
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/index.css";
-// Actions
-import {actionCreator} from '../../../actions/index'
+// Methods
+import { loadData } from './methods/_index'
 
 
 
-const WeatherApp = (props) => {
+
+const WeatherApp = () => {
 
   const [weatherData, loadWeatherData] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
   const [weatherSelected, selectWeather] = useState(null)
 
   useEffect( () => {
-    loadData();
-  }, [])
-
-  const loadData = () => {
-    const weatherDataLoaded = APIDATA.map( item => {
-      // console.log(item.weather[0].main)
-      return {
-        humidity: String(item.main.humidity),
-        wind: String(item.wind.speed),
-        temperature: (item.main.temp / 10).toFixed(2),
-        city: item.city.name,
-        icon: item.weather[0].main,
-        nextDaysData: item.nextDays
-      };
-    })
-    // Set data
+    const weatherDataLoaded = loadData(APIDATA);
     loadWeatherData(weatherDataLoaded);
     selectWeather(weatherDataLoaded[0]);
-
-    
-    setTimeout( () => {
-      setDataLoaded(true);
-    },1500)
-  }
+    setTimeout(() => {
+      setDataLoaded(true)
+    }, 1000);
+  }, [])
   
   const changeWeather = (weather) => {
-    // Accedo a éstas acciones mediante las props.
-    props.selectWeatherAction(weather);
+    // Accedo a selectWeatherAction mediante las props.
     selectWeather(weather);
   }
 
@@ -75,11 +57,5 @@ const WeatherApp = (props) => {
 
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  // Éste es un objeto de las acciones que puede usar éste componente
-  selectWeatherAction: (value) => dispatch(actionCreator(value)),
-});
+export default WeatherApp;
 
-const WeatherAppConnected = connect(null, mapDispatchToProps)(WeatherApp);
-
-export default WeatherAppConnected;
