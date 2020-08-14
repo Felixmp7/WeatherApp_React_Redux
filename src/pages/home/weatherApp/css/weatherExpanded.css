@@ -20,8 +20,9 @@
   /* border: 2px solid; */
   display: flex;
 }
-.nexWeathers {
-  border: 2px solid;
+.nextWeatherContainer {
+  /* border: 2px solid; */
   display: flex;
+  flex-direction: column;
 }
 

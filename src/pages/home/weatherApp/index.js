@@ -19,7 +19,7 @@ const WeatherApp = () => {
     loadData();
   }, [])
 
-  const loadData = async () => {
+  const loadData = () => {
     const weatherDataLoaded = APIDATA.map( item => {
       // console.log(item.weather[0].main)
       return {
@@ -34,15 +34,16 @@ const WeatherApp = () => {
     // Set data
     loadWeatherData(weatherDataLoaded);
     selectWeather(weatherDataLoaded[0]);
+    
     setTimeout( () => {
       setDataLoaded(true);
-    },3000)
+    },1500)
   }
 
   if (dataLoaded) {
     return (
       <div className="containerApp">
-        <WeatherList weatherList={weatherData} />
+        <WeatherList weatherList={weatherData} selectWeather={selectWeather} />
         <WeatherExpanded weatherSelected={weatherSelected} />
       </div>
     );

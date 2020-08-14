@@ -13,7 +13,7 @@ const iconsRelation = {
   'Rain': RAIN,
 };
 
-const WeatherList = ({weatherList}) => {
+const WeatherList = ({weatherList, selectWeather}) => {
 
   const getIcon = (icon) => {
     const iconTransformed = iconsRelation[icon];
@@ -30,6 +30,8 @@ const WeatherList = ({weatherList}) => {
             <WeatherCard
               key={index}
               withShadow
+              weatherExpandedForData={weather}
+              selectWeather={selectWeather}
               humidity={weather.humidity}
               wind={weather.wind}
               temperature={weather.temperature}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Loader from "react-loader-spinner";
 import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
 import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard'
+import NextWeather from '../components/NextWeather';
 import '../css/weatherExpanded.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -12,20 +13,23 @@ const iconsRelation = {
   Clouds: CLOUDY,
   Thunderstorm: THUNDERS,
   Rain: RAIN,
-  Snow: ''
+  Snow: 'SNOW'
 };
 
 const WeatherExpanded = ({ weatherSelected }) => {
-  console.log(weatherSelected);
+  // console.log(weatherSelected);
 
   const [iconTransformed, transformIcon] = useState(weatherSelected.icon);
   const [dataLoaded, setLoaded] = useState(false);
+  const [nextDaysData , loadNextDaysData] = useState([...weatherSelected.nextDaysData])
 
   useEffect(() => {
-    getIcon(weatherSelected.icon);
+    getIcon(iconTransformed);
     setTimeout( () => {
-      setLoaded(true);
-    },5000)
+
+    setLoaded(true);
+      console.log(nextDaysData);
+    },2000)
     
   }, [])
 
@@ -38,7 +42,8 @@ const WeatherExpanded = ({ weatherSelected }) => {
     humidity,
     wind,
     temperature,
-    city
+    city,
+    icon
   } = weatherSelected;
 
   return (
@@ -55,7 +60,23 @@ const WeatherExpanded = ({ weatherSelected }) => {
               icon={iconTransformed}
             />
           </div>
-          {/* <div className="nexWeathers"></div> */}
+          <div className="nextWeatherContainer">
+            {
+              nextDaysData.map((element,index) => {
+                const nextIcon = iconsRelation[element.icon];
+                return (
+                  <NextWeather
+                    key={index}
+                    wind={element.wind}
+                    day={element.day}
+                    temperature={element.temperature}
+                    humidity={element.humidity}
+                    icon={nextIcon}
+                  />
+                );
+              })
+            }
+          </div>
         </div>
       ) : (
         <div className="loaderCentered">

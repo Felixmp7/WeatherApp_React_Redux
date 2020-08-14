@@ -38,20 +38,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -94,20 +97,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -150,20 +156,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -206,20 +215,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -262,20 +274,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -318,20 +333,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -374,20 +392,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -430,20 +451,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -486,20 +510,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -542,20 +569,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -598,20 +628,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -654,20 +687,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -710,20 +746,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -766,20 +805,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -822,20 +864,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -878,20 +923,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -934,20 +982,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -990,20 +1041,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
@@ -1046,20 +1100,23 @@
       {
         "humidity": 80,
         "wind": 3,
-        "temperature": 220,
-        "icon": "Snow"
+        "temperature": 22,
+        "icon": "Snow",
+        "day": "Monday"
       },
       {
         "humidity": 40,
         "wind": 3.2,
-        "temperature": 200,
-        "icon": "Clouds"
+        "temperature": 20,
+        "icon": "Clouds",
+        "day":"Tuesday"
       },
       {
         "humidity": 20,
         "wind": 3,
-        "temperature": 320,
-        "icon": "Sun"
+        "temperature": 32,
+        "icon": "Clear",
+        "day":"Wednesday"
       }
     ]
   },
