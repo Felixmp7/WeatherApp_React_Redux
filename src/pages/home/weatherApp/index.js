@@ -8,6 +8,11 @@ import APIDATA from '../../../utils/api/data.json';
 // CSS
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/index.css";
+// Store
+import { createStore } from 'redux';
+
+const store = createStore(() => {},
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); 
 
 const WeatherApp = () => {
 
@@ -34,6 +39,9 @@ const WeatherApp = () => {
     // Set data
     loadWeatherData(weatherDataLoaded);
     selectWeather(weatherDataLoaded[0]);
+
+    const action = { type: "setCity", value: weatherDataLoaded[0] };
+    store.dispatch(action);
     
     setTimeout( () => {
       setDataLoaded(true);
