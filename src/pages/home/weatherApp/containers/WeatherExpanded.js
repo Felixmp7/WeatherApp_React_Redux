@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types'
-import Loader from "react-loader-spinner";
+// import Loader from "react-loader-spinner";
 import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
 import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard'
 import NextWeather from '../components/NextWeather';
@@ -20,18 +20,11 @@ const WeatherExpanded = ({ weatherSelected }) => {
   // console.log(weatherSelected);
 
   const [iconTransformed, transformIcon] = useState(weatherSelected.icon);
-  const [dataLoaded, setLoaded] = useState(false);
-  const [nextDaysData , loadNextDaysData] = useState([...weatherSelected.nextDaysData])
+  const [nextDaysData] = useState([...weatherSelected.nextDaysData])
 
   useEffect(() => {
-    getIcon(iconTransformed);
-    setTimeout( () => {
-
-    setLoaded(true);
-      console.log(nextDaysData);
-    },2000)
-    
-  }, [])
+    getIcon(weatherSelected.icon);
+  }, [weatherSelected.icon]);
 
   const getIcon = (icon) => {
     const iconTransformed = iconsRelation[icon];
@@ -42,14 +35,12 @@ const WeatherExpanded = ({ weatherSelected }) => {
     humidity,
     wind,
     temperature,
-    city,
-    icon
+    city
   } = weatherSelected;
 
   return (
     <div className="containerWeatherColumn">
       <h3 className="currentTitle">Current Weather</h3>
-      {dataLoaded ? (
         <div className="containerWeatherExpanded">
           <div className="currentWeather">
             <WeatherCard
@@ -78,17 +69,6 @@ const WeatherExpanded = ({ weatherSelected }) => {
             }
           </div>
         </div>
-      ) : (
-        <div className="loaderCentered">
-          <Loader
-            type="TailSpin"
-            color="#3a2ca5"
-            height={40}
-            width={40}
-            // timeout={3000} //3 secs
-          />
-        </div>
-      )}
     </div>
   );
 };
