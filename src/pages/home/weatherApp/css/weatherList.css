@@ -1,8 +1,8 @@
 .containerList {
   width: 40%;
   /* background-color: lightcyan; */
-  height: 100%;
-  /* overflow: auto; */
+  height: 90vh;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,6 +28,7 @@
 
   /* height: 80%; */
   /* overflow: auto; */
+  /* height: 700px; */
   /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;

@@ -36,23 +36,23 @@
     ],
     "nextDays": [
       {
-        "humidity": 80,
-        "wind": 3,
-        "temperature": 22,
+        "humidity": 40,
+        "wind": 3.4,
+        "temperature": 12,
         "icon": "Snow",
         "day": "Monday"
       },
       {
-        "humidity": 40,
-        "wind": 3.2,
-        "temperature": 20,
+        "humidity": 32,
+        "wind": 4.7,
+        "temperature": 12,
         "icon": "Clouds",
         "day":"Tuesday"
       },
       {
-        "humidity": 20,
-        "wind": 3,
-        "temperature": 32,
+        "humidity": 12,
+        "wind": 0.3,
+        "temperature": 37,
         "icon": "Clear",
         "day":"Wednesday"
       }
@@ -95,23 +95,23 @@
     ],
     "nextDays": [
       {
-        "humidity": 80,
-        "wind": 3,
-        "temperature": 22,
+        "humidity": 40,
+        "wind": 3.4,
+        "temperature": 12,
         "icon": "Snow",
         "day": "Monday"
       },
       {
-        "humidity": 40,
-        "wind": 3.2,
-        "temperature": 20,
+        "humidity": 32,
+        "wind": 4.7,
+        "temperature": 12,
         "icon": "Clouds",
         "day":"Tuesday"
       },
       {
-        "humidity": 20,
-        "wind": 3,
-        "temperature": 32,
+        "humidity": 12,
+        "wind": 0.3,
+        "temperature": 37,
         "icon": "Clear",
         "day":"Wednesday"
       }
@@ -154,23 +154,23 @@
     ],
     "nextDays": [
       {
-        "humidity": 80,
-        "wind": 3,
-        "temperature": 22,
+        "humidity": 40,
+        "wind": 3.4,
+        "temperature": 12,
         "icon": "Snow",
         "day": "Monday"
       },
       {
-        "humidity": 40,
-        "wind": 3.2,
-        "temperature": 20,
+        "humidity": 32,
+        "wind": 4.7,
+        "temperature": 12,
         "icon": "Clouds",
         "day":"Tuesday"
       },
       {
-        "humidity": 20,
-        "wind": 3,
-        "temperature": 32,
+        "humidity": 12,
+        "wind": 0.3,
+        "temperature": 37,
         "icon": "Clear",
         "day":"Wednesday"
       }
@@ -213,23 +213,23 @@
     ],
     "nextDays": [
       {
-        "humidity": 80,
-        "wind": 3,
-        "temperature": 22,
+        "humidity": 40,
+        "wind": 3.4,
+        "temperature": 12,
         "icon": "Snow",
         "day": "Monday"
       },
       {
-        "humidity": 40,
-        "wind": 3.2,
-        "temperature": 20,
+        "humidity": 32,
+        "wind": 4.7,
+        "temperature": 12,
         "icon": "Clouds",
         "day":"Tuesday"
       },
       {
-        "humidity": 20,
-        "wind": 3,
-        "temperature": 32,
+        "humidity": 12,
+        "wind": 0.3,
+        "temperature": 37,
         "icon": "Clear",
         "day":"Wednesday"
       }
@@ -272,23 +272,23 @@
     ],
     "nextDays": [
       {
-        "humidity": 80,
-        "wind": 3,
-        "temperature": 22,
+        "humidity": 40,
+        "wind": 3.4,
+        "temperature": 12,
         "icon": "Snow",
         "day": "Monday"
       },
       {
-        "humidity": 40,
-        "wind": 3.2,
-        "temperature": 20,
+        "humidity": 32,
+        "wind": 4.7,
+        "temperature": 12,
         "icon": "Clouds",
         "day":"Tuesday"
       },
       {
-        "humidity": 20,
-        "wind": 3,
-        "temperature": 32,
+        "humidity": 12,
+        "wind": 0.3,
+        "temperature": 37,
         "icon": "Clear",
         "day":"Wednesday"
       }
@@ -1117,42 +1117,6 @@
         "temperature": 32,
         "icon": "Clear",
         "day":"Wednesday"
-      }
-    ]
-  },
-{
-    "city": {
-      "id": 70272,
-      "name": "As Suwayda",
-      "findname": "AS SUWAYDA",
-      "country": "YE",
-      "coord": {
-        "lon": 45.2304,
-        "lat": 13.78694
-      },
-      "zoom": 16
-    },
-    "time": 1554462304,
-    "main": {
-      "temp": 299.629,
-      "pressure": 1008.31,
-      "humidity": 40,
-      "temp_min": 299.629,
-      "temp_max": 299.629
-    },
-    "wind": {
-      "speed": 1.22,
-      "deg": 198.5
-    },
-    "clouds": {
-      "all": 88
-    },
-    "weather": [
-      {
-        "id": 804,
-        "main": "Clouds",
-        "description": "overcast clouds",
-        "icon": "04d"
       }
     ]
   }
