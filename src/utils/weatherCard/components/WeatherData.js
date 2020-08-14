@@ -15,14 +15,17 @@ const icons = {
   [CLOUDY]: mdiWeatherCloudy,
   [RAIN]: mdiWeatherPouring,
   [THUNDERS]: mdiWeatherLightning,
+  'Clouds': mdiWeatherCloudy
 };
 
 
 const WeatherData = ({ icon, temperature, extraInfo }) => {
-  // Methods
+  // console.log(icon);
+
   const renderIcon = iconParam => {
+    // console.log(iconParam)
     let color;
-    const icon = icons[iconParam];
+    const iconSelected = icons[iconParam];
 
     if (iconParam === 'SUN') color = "#f58747";
     else if (iconParam === 'CLOUDY') color = "#00d8ff";
@@ -30,7 +33,7 @@ const WeatherData = ({ icon, temperature, extraInfo }) => {
     else if (iconParam === 'RAIN') color = "#555";
     return (
       <div className="containerIconWeatherData">
-        <Icon path={icon} title="icon" size={1} color={color} />
+        <Icon path={iconSelected} title="icon" size={1} color={color} />
       </div>
     );
   }

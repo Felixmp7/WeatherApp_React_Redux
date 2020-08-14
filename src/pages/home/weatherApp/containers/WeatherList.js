@@ -36,6 +36,7 @@ const WeatherList = ({ weatherList, selectWeather, selectWeatherAction }) => {
         {weatherList.map((weather, index) => {
           // console.log(weather.icon);
           const iconTransformed = getIcon(weather.icon);
+          // console.log(iconTransformed)
           return (
             <WeatherCard
               key={index}
