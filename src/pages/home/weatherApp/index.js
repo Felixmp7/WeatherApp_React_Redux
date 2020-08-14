@@ -8,11 +8,12 @@ import APIDATA from '../../../utils/api/data.json';
 // CSS
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/index.css";
+// Actions
+import {actionCreator} from '../../../actions/index'
 // Store
-import { createStore } from 'redux';
+import {store} from '../../../store/index'
 
-const store = createStore(() => {},
-window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); 
+
 
 const WeatherApp = () => {
 
@@ -40,18 +41,21 @@ const WeatherApp = () => {
     loadWeatherData(weatherDataLoaded);
     selectWeather(weatherDataLoaded[0]);
 
-    const action = { type: "setCity", value: weatherDataLoaded[0] };
-    store.dispatch(action);
     
     setTimeout( () => {
       setDataLoaded(true);
     },1500)
   }
+  
+  const changeWeather = (weather) => {
+    store.dispatch(actionCreator(weather));
+    selectWeather(weather);
+  }
 
   if (dataLoaded) {
     return (
       <div className="containerApp">
-        <WeatherList weatherList={weatherData} selectWeather={selectWeather} />
+        <WeatherList weatherList={weatherData} selectWeather={changeWeather} />
         <WeatherExpanded weatherSelected={weatherSelected} />
       </div>
     );

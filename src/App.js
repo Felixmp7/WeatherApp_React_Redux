@@ -1,6 +1,15 @@
 import React from 'react';
-import Home from './pages/home/weatherApp';
+import WeatherApp from './pages/home/weatherApp';
+import { Provider } from 'react-redux'
+import { store } from "./store/index";
 
-const App = () => <Home/>;
+
+const App = () => (
+  <Provider
+    store={store}
+  >
+    <WeatherApp/>
+  </Provider>
+);
 
 export default App;
