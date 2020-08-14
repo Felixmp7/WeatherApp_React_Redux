@@ -12,8 +12,6 @@ import "./css/index.css";
 import { loadData } from './methods/_index'
 
 
-
-
 const WeatherApp = () => {
 
   const [weatherData, loadWeatherData] = useState({});
@@ -24,6 +22,7 @@ const WeatherApp = () => {
     const weatherDataLoaded = loadData(APIDATA);
     loadWeatherData(weatherDataLoaded);
     selectWeather(weatherDataLoaded[0]);
+    
     setTimeout(() => {
       setDataLoaded(true)
     }, 1000);
