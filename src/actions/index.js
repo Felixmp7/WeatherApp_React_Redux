@@ -1,6 +1,6 @@
 export const SELECT_CITY = 'SELECT_CITY'
 
-export const actionCreator = (value) => ({
+export const actionCreator = (payload) => ({
   type: SELECT_CITY,
-  value,
+  payload,
 });
