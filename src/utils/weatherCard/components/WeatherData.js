@@ -57,8 +57,8 @@ WeatherData.propTypes = {
   icon: PropTypes.string,
   temperature: PropTypes.string,
   extraInfo: PropTypes.shape({
-    humidity: PropTypes.string,
-    wind: PropTypes.string,
+    humidity: PropTypes.number,
+    wind: PropTypes.number,
   }),
 };
 

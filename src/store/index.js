@@ -1,16 +1,11 @@
 // Store
-import { createStore } from 'redux';
-import { setFirstWeather } from '../reducers/city'
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import storeReducer from '../reducers/index'
 
-const initialState = {
-  citySelected: null
-};
+const initialState = {};
 
-// Reducer
-/* 
-  Función que recibe el state y el action, y suele retornar un nuevo estado.
-*/
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
-export const store = createStore(setFirstWeather, initialState,
-window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export const store = createStore(storeReducer, initialState, composeEnhancers(applyMiddleware(thunk)))

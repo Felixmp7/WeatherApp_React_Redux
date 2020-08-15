@@ -1,0 +1,2 @@
+export const LOAD_WEATHER_DATA = "LOAD_WEATHER_DATA";
+export const SELECT_CITY = "SELECT_CITY";

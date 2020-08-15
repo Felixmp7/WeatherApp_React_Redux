@@ -1,4 +1,4 @@
-import { SELECT_CITY } from '../actions/index'
+import { SELECT_CITY } from '../constants/actionTypes'
 
 // Funciones Puras
 /* 
@@ -7,13 +7,13 @@ import { SELECT_CITY } from '../actions/index'
   de otros datos, sólo de los que recibe por parametros.
 */
 
-export const setFirstWeather = (state, action) => {
+export const expandCityWeather = (state = null, action) => {
   switch (action.type) {
     case SELECT_CITY:
-      return { ...state, citySelected: action.payload};
-      break;
+      return { ...state, citySelected: action.payload };
 
-    default: return state;
-      break;
+    default:
+      return state;
   }
 };
+

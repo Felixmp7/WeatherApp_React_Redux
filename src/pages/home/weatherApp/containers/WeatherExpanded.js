@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 // import Loader from "react-loader-spinner";
 import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
@@ -16,59 +17,59 @@ const iconsRelation = {
   Snow: 'SNOW'
 };
 
-const WeatherExpanded = ({ weatherSelected }) => {
-  // console.log(weatherSelected);
+const WeatherExpanded = ({ weatherSelected, expandCityWeather}) => {
+  const {
+    humidity,
+    wind,
+    temperature,
+    city,
+    nextWeatherDays,
+    icon
+  } = expandCityWeather.citySelected;
 
-  const [iconTransformed, transformIcon] = useState(weatherSelected.icon);
-  const [nextDaysData] = useState([...weatherSelected.nextDaysData])
+
+  const [iconTransformed, transformIcon] = useState(icon);
+  // const [nextDaysData] = useState([...weatherSelected.nextDaysData])
 
   useEffect(() => {
-    getIcon(weatherSelected.icon);
-  }, [weatherSelected.icon]);
+    getIcon(icon);
+  }, [icon]);
 
   const getIcon = (icon) => {
     const iconTransformed = iconsRelation[icon];
     transformIcon(iconTransformed);
   };
 
-  const {
-    humidity,
-    wind,
-    temperature,
-    city
-  } = weatherSelected;
 
   return (
     <div className="containerWeatherColumn">
       <h3 className="currentTitle">Current Weather</h3>
-        <div className="containerWeatherExpanded">
-          <div className="currentWeather">
-            <WeatherCard
-              humidity={humidity}
-              wind={wind}
-              temperature={temperature}
-              city={city}
-              icon={iconTransformed}
-            />
-          </div>
-          <div className="nextWeatherContainer">
-            {
-              nextDaysData.map((element,index) => {
-                const nextIcon = iconsRelation[element.icon];
-                return (
-                  <NextWeather
-                    key={index}
-                    wind={element.wind}
-                    day={element.day}
-                    temperature={element.temperature}
-                    humidity={element.humidity}
-                    icon={nextIcon}
-                  />
-                );
-              })
-            }
-          </div>
+      <div className="containerWeatherExpanded">
+        <div className="currentWeather">
+          <WeatherCard
+            humidity={humidity}
+            wind={wind}
+            temperature={temperature}
+            city={city}
+            icon={iconTransformed}
+          />
         </div>
+        <div className="nextWeatherContainer">
+          {nextWeatherDays.map((element, index) => {
+            const nextIcon = iconsRelation[element.icon];
+            return (
+              <NextWeather
+                key={index}
+                wind={element.wind}
+                day={element.day}
+                temperature={element.temperature}
+                humidity={element.humidity}
+                icon={nextIcon}
+              />
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
@@ -77,4 +78,7 @@ WeatherExpanded.propTypes = {
   weatherSelected: PropTypes.object
 }
 
-export default WeatherExpanded
+const mapState = ({ expandCityWeather }) => ({expandCityWeather});
+
+
+export default connect(mapState,null)(WeatherExpanded);
