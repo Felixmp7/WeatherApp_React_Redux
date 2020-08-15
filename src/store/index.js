@@ -2,7 +2,9 @@
 import { createStore } from 'redux';
 import { setFirstWeather } from '../reducers/city'
 
-const initialState = {};
+const initialState = {
+  citySelected: null
+};
 
 // Reducer
 /* 
