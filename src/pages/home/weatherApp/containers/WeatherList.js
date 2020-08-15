@@ -26,6 +26,7 @@ const WeatherList = ({ weatherList, selectWeather, selectWeatherAction }) => {
 
   const handleSelectWeather = (weather) => {
     selectWeather(weather);
+    // Accedo a selectWeatherAction mediante las props.
     selectWeatherAction(weather);
   };
 
