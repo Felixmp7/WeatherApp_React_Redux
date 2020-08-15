@@ -28,10 +28,7 @@ const WeatherApp = () => {
     }, 1000);
   }, [])
   
-  const changeWeather = (weather) => {
-    // Accedo a selectWeatherAction mediante las props.
-    selectWeather(weather);
-  }
+  const changeWeather = (weather) => selectWeather(weather);
 
   if (dataLoaded) {
     return (
