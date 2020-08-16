@@ -10,7 +10,7 @@ export const getWeatherData = async () => {
 
     if (serverResponse.status !== 404) {
       response = "SUCCESS";
-      return serverResponse.json()
+      // return serverResponse.json()
     } else response = `FAIL`;
 
     return response;

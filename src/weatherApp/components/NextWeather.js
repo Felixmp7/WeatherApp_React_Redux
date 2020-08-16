@@ -7,6 +7,7 @@ import Skeleton from "@material-ui/lab/Skeleton";
 
 
 const NextWeather = ({temperature, icon, humidity, wind, day}) => {
+
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
