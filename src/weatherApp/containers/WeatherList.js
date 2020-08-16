@@ -6,20 +6,10 @@ import { connect } from "react-redux";
 import WeatherCard from "../../../src/utils/weatherCard/components/WeatherCard";
 // DATA
 import API_DATA from "../../../src/utils/api/data.json";
-// Constants
-import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../src/constants/icons";
-// import { LOAD_WEATHER_DATA, SELECT_CITY} from "../../../../constants/actionTypes";
 //CSS
 import '../css/weatherList.css'
 // Actions
 import { selectCity } from "../../../src/actions/index";
-
-const iconsRelation = {
-  'Clear': SUN,
-  'Clouds': CLOUDY,
-  'Thunderstorm': THUNDERS,
-  'Rain': RAIN,
-};
 
 const WeatherList = ({
   selectWeatherAction,
@@ -31,13 +21,7 @@ const WeatherList = ({
     // selectWeatherAction(API_DATA[0]);
   }, []);
 
-  const getIcon = (icon) => {
-    const iconTransformed = iconsRelation[icon];
-    return iconTransformed;
-  };
-
   const handleSelectWeather = (weather) => {
-    // selectWeather(weather);
     // Accedo a selectWeatherAction mediante las props.
     selectWeatherAction(weather);
   };
@@ -50,7 +34,7 @@ const WeatherList = ({
           weatherDataList.map((weather, index) => {
             // console.log(weather);
             const weatherObject = {
-              iconTransformed: getIcon(weather.weather[0].main),
+              icon: weather.weather[0].main,
               temperature: ((weather.main.temp)/10).toFixed(1),
               humidity: weather.main.humidity,
               wind: weather.wind.speed,
@@ -69,7 +53,7 @@ const WeatherList = ({
                 wind={weatherObject.wind}
                 temperature={weatherObject.temperature}
                 city={weatherObject.city}
-                icon={weatherObject.iconTransformed}
+                icon={weatherObject.icon}
               />
             );
           })
@@ -82,8 +66,6 @@ const WeatherList = ({
 WeatherList.propTypes = {
   selectWeatherAction: PropTypes.func.isRequired,
 };
-
-// // const mapState = ({ citySelected }) => ({citySelected});
 
 
 const mapDispatch = (dispatch) => ({

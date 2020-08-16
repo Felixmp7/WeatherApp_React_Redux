@@ -2,20 +2,10 @@ import React, { useState, useEffect } from "react";
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 // import Loader from "react-loader-spinner";
-import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../src/constants/icons";
 import WeatherCard from '../../../src/utils/weatherCard/components/WeatherCard'
 import NextWeather from '../components/NextWeather';
 import '../css/weatherExpanded.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
-
-const iconsRelation = {
-  Clear: SUN,
-  Clouds: CLOUDY,
-  Thunderstorm: THUNDERS,
-  Rain: RAIN,
-  Snow: 'SNOW'
-};
 
 const WeatherExpanded = ({expandCityWeather}) => {
 
@@ -28,19 +18,6 @@ const WeatherExpanded = ({expandCityWeather}) => {
     icon
   } = expandCityWeather.citySelected;
 
-
-  const [iconTransformed, transformIcon] = useState(icon);
-  
-  const getIcon = (icon) => {
-    const iconTransformed = iconsRelation[icon];
-    transformIcon(iconTransformed);
-  };
-
-
-  useEffect(() => {
-    getIcon(icon);
-  }, [icon]);
-
   
   return (
     <div className="containerWeatherColumn">
@@ -52,12 +29,11 @@ const WeatherExpanded = ({expandCityWeather}) => {
             wind={wind}
             temperature={temperature}
             city={city}
-            icon={iconTransformed}
+            icon={icon}
           />
         </div>
         <div className="nextWeatherContainer">
           {nextWeatherDays.map((element, index) => {
-            const nextIcon = iconsRelation[element.icon];
             return (
               <NextWeather
                 key={index}
@@ -65,7 +41,7 @@ const WeatherExpanded = ({expandCityWeather}) => {
                 day={element.day}
                 temperature={element.temperature}
                 humidity={element.humidity}
-                icon={nextIcon}
+                icon={element.icon}
               />
             );
           })}

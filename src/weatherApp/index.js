@@ -20,7 +20,6 @@ const WeatherApp = ({expandCityWeather}) => {
         }
       </div>
     );
-
 }
 
 const mapState = ({ expandCityWeather }) => ({ expandCityWeather });
