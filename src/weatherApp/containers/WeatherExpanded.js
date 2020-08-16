@@ -9,6 +9,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { _getCitySelected } from '../../reducers/expandCityWeather';
 
 const WeatherExpanded = ({ citySelected }) => {
+  console.log(citySelected)
   const {
     humidity,
     wind,
@@ -52,8 +53,8 @@ const WeatherExpanded = ({ citySelected }) => {
 };
 
 WeatherExpanded.propTypes = {
-  weatherSelected: PropTypes.object
-}
+  citySelected: PropTypes.object,
+};
 
 const mapState = (state) => ({
   /*

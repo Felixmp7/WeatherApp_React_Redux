@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { expandCityWeather } from "./expandCityWeather";
 
 export default combineReducers({
-  expandCityWeather,
+  citySelected: expandCityWeather,
   // citiesList: loadFirstCitiesList,
 });
 

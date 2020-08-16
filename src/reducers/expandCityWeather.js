@@ -1,4 +1,5 @@
 import { SELECT_CITY } from '../constants/actionTypes'
+import { createSelector } from 'reselect';
 
 // Funciones Puras
 /* 
@@ -10,14 +11,17 @@ import { SELECT_CITY } from '../constants/actionTypes'
 export const expandCityWeather = (state = null, action) => {
   switch (action.type) {
     case SELECT_CITY:
-      return { 
-        ...state,
-        citySelected: action.payload
-      };
-
+      return action.payload;
     default:
       return state;
   }
 };
 
-export const _getCitySelected = state => state.expandCityWeather.citySelected;
+// Implementando el selector de reSelect
+
+// Antes
+// export const _getCitySelected = state => state.expandCityWeather.citySelected;
+
+// Después
+export const _getCitySelected = 
+  createSelector(state => state.citySelected, citySelected => citySelected);

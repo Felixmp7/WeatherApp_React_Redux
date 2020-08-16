@@ -7,22 +7,23 @@ import WeatherList from "./containers/WeatherList";
 // CSS
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/index.css";
+import { _getCitySelected } from '../reducers/expandCityWeather';
 // Methods
 // import { loadData } from './methods/_index'
 
 
-const WeatherApp = ({expandCityWeather}) => {
+const WeatherApp = ({citySelected}) => {
     return (
       <div className="containerApp">
         <WeatherList  />
         {
-          expandCityWeather && <WeatherExpanded />
+          citySelected && <WeatherExpanded />
         }
       </div>
     );
 }
 
-const mapState = ({ expandCityWeather }) => ({ expandCityWeather });
+const mapState = state => ({ citySelected: _getCitySelected(state) });
 
 export default connect(mapState,null)(WeatherApp);
 
