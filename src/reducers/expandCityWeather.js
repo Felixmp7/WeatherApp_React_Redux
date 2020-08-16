@@ -10,10 +10,14 @@ import { SELECT_CITY } from '../constants/actionTypes'
 export const expandCityWeather = (state = null, action) => {
   switch (action.type) {
     case SELECT_CITY:
-      return { ...state, citySelected: action.payload };
+      return { 
+        ...state,
+        citySelected: action.payload
+      };
 
     default:
       return state;
   }
 };
 
+export const _getCitySelected = state => state.expandCityWeather.citySelected;
