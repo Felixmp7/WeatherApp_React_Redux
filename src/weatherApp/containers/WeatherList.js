@@ -11,20 +11,18 @@ import '../css/weatherList.css'
 // Actions
 import { selectCity } from "../../../src/actions/index";
 
-const WeatherList = ({
-  selectWeatherAction,
-}) => {
+const WeatherList = ({selectWeatherAction}) => {
   const [weatherDataList, loadWeatherDataList] = useState([]);
-
-  useEffect(() => {
-    loadWeatherDataList(API_DATA);
-    // selectWeatherAction(API_DATA[0]);
-  }, []);
-
+  
   const handleSelectWeather = (weather) => {
     // Accedo a selectWeatherAction mediante las props.
     selectWeatherAction(weather);
   };
+
+
+  useEffect(() => {
+    loadWeatherDataList(API_DATA);
+  }, []);
 
   return (
     <div className="containerList">
@@ -48,7 +46,7 @@ const WeatherList = ({
                 key={index}
                 withShadow
                 weatherExpandedForData={weatherObject}
-                selectWeather={handleSelectWeather}
+                onClickFunction={() => handleSelectWeather(weatherObject)}
                 humidity={weatherObject.humidity}
                 wind={weatherObject.wind}
                 temperature={weatherObject.temperature}
@@ -70,7 +68,7 @@ WeatherList.propTypes = {
 
 const mapDispatch = (dispatch) => ({
   // Éste es un objeto de las acciones que puede usar éste componente
-  selectWeatherAction: (value) => dispatch(selectCity(value)),
+  selectWeatherAction: (city) => dispatch(selectCity(city)),
 });
 
 export default connect(null, mapDispatch)(WeatherList);

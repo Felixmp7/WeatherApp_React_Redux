@@ -9,12 +9,11 @@ const WeatherCard = ({
   humidity,
   wind,
   city,
-  selectWeather,
-  weatherExpandedForData,
+  onClickFunction
 }) => (
   <div 
     className="containerWeatherItem"
-    onClick={() => selectWeather(weatherExpandedForData)}
+    onClick={onClickFunction}
   >
     <Location location={city} />
     <WeatherData

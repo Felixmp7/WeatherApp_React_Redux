@@ -30,6 +30,7 @@ const WeatherExpanded = ({expandCityWeather}) => {
             temperature={temperature}
             city={city}
             icon={icon}
+            onClickFunction={null}
           />
         </div>
         <div className="nextWeatherContainer">
