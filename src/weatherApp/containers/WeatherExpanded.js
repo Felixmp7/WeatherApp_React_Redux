@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 // import Loader from "react-loader-spinner";
-import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
-import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard'
+import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../src/constants/icons";
+import WeatherCard from '../../../src/utils/weatherCard/components/WeatherCard'
 import NextWeather from '../components/NextWeather';
 import '../css/weatherExpanded.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -17,7 +17,8 @@ const iconsRelation = {
   Snow: 'SNOW'
 };
 
-const WeatherExpanded = ({ weatherSelected, expandCityWeather}) => {
+const WeatherExpanded = ({expandCityWeather}) => {
+
   const {
     humidity,
     wind,
@@ -29,18 +30,18 @@ const WeatherExpanded = ({ weatherSelected, expandCityWeather}) => {
 
 
   const [iconTransformed, transformIcon] = useState(icon);
-  // const [nextDaysData] = useState([...weatherSelected.nextDaysData])
-
-  useEffect(() => {
-    getIcon(icon);
-  }, [icon]);
-
+  
   const getIcon = (icon) => {
     const iconTransformed = iconsRelation[icon];
     transformIcon(iconTransformed);
   };
 
 
+  useEffect(() => {
+    getIcon(icon);
+  }, [icon]);
+
+  
   return (
     <div className="containerWeatherColumn">
       <h3 className="currentTitle">Current Weather</h3>

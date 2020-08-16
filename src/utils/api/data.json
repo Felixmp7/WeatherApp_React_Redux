@@ -38,7 +38,7 @@
       {
         "humidity": 40,
         "wind": 3.4,
-        "temperature": 12,
+        "temperature": 21,
         "icon": "Snow",
         "day": "Monday"
       },
@@ -52,7 +52,7 @@
       {
         "humidity": 12,
         "wind": 0.3,
-        "temperature": 37,
+        "temperature": 38,
         "icon": "Clear",
         "day":"Wednesday"
       }

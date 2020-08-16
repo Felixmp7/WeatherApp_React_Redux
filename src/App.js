@@ -1,5 +1,5 @@
 import React from 'react';
-import WeatherApp from './pages/home/weatherApp';
+import WeatherApp from './weatherApp';
 import { Provider } from 'react-redux'
 import { store } from "./store/index";
 

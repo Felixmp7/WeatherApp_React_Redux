@@ -3,16 +3,16 @@ import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 import { connect } from "react-redux";
 // Components
-import WeatherCard from '../../../../utils/weatherCard/components/WeatherCard';
+import WeatherCard from "../../../src/utils/weatherCard/components/WeatherCard";
 // DATA
-import API_DATA from "../../../../utils/api/data.json";
+import API_DATA from "../../../src/utils/api/data.json";
 // Constants
-import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../../constants/icons";
+import { SUN, CLOUDY, THUNDERS, RAIN } from "../../../src/constants/icons";
 // import { LOAD_WEATHER_DATA, SELECT_CITY} from "../../../../constants/actionTypes";
 //CSS
 import '../css/weatherList.css'
 // Actions
-import { selectCity } from "../../../../actions/index";
+import { selectCity } from "../../../src/actions/index";
 
 const iconsRelation = {
   'Clear': SUN,
