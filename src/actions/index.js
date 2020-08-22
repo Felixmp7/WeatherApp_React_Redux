@@ -12,7 +12,10 @@ const setForecastData = (payload) => ({
 });
 
 export const selectCity = (payload) => {
-  return async dispatch => {
+  return async (dispatch, getState) => {
+    // getState  me sirve para obtener el estado y verificar si ya tengo una data guardada
+    // evitar hacer una petición nueva de ese dato.
+    
     // Disparar acción de cambio de ciudad
     dispatch(setCity(payload));
 
